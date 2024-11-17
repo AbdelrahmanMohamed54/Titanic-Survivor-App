@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Titanic Survival Predictor</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#calculator">Survival Calculator</a></li>
+            </ul>
+        </nav>
+      </header>
+<!-- linking the survival button-->      
+<a href="index.html" class="survival-button">Survival Calculator</a>
+<!--making containers for the main parts of the body--> 
+    <div class="container">
+        
+        <section id="overview">
+            <h2>Overview</h2>
+            <div class="overview">
+                <p>Our website introduces a software solution designed to predict the likelihood of survival for passengers involved in the Titanic accident. Utilizing machine learning algorithms, this predictive model analyzes historical data, extracting valuable insights to generate accurate survival predictions.</p>
+                <p>Using historical data from the Titanic disaster, this tool helps users understand the factors that influenced survival rates and provides insights into the significance of different passenger attributes.</p>
+                <p>Explore the features and functionalities of the Titanic Survival Predictor below.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="features">
+                <h3>Dataset Information</h3>
+                <p>The dataset used in the Titanic Survival Predictor includes information about passengers such as:</p>
+                <ul>
+                    <li>PClass: Passenger class (First, Second, Third)</li>
+                    <li>Sex: Gender (Male or Female)</li>
+                    <li>Age: Age of the passenger</li>
+                    <li>Fare: Ticket fare</li>
+                    <li>Traveled Alone: Whether the passenger traveled alone (Yes or No)</li>
+                    <li>Embarked: Port of embarkation (Cherbourg, Queenstown, Southampton)</li>
+                </ul>
+                <p>These features are significant in predicting survival rates and understanding the demographics of passengers aboard the Titanic.</p>
+                <p> Predictions are dynamically updated as users modify the input parameters, offering real-time insights into survival likelihood.</p> 
+                <p>The website maintains a history of the last five passengers and their corresponding predictions within the current session, facilitating easy reference and comparison.</p>
+            </div>
+        </section>
+
+        <section id="calculator">
+          <h2><a href="index.html" class="calculator-link button">Survival Calculator</a></h2>
+          <div class="survival_calculator">
+              <h3>Functionality</h3>
+              <p>The Survival Calculator allows users to input passenger details such as PClass, Sex, Age, Fare, whether they traveled alone, and the port of embarkation.</p>
+              <p> By leveraging techniques such as Random Forest, Decision Tree, KNN, Support Vector Machines, and Logistic Regression, our predictive model processes vast datasets related to Titanic passengers. Through this analysis, it distills complex patterns and relationships, enabling precise predictions regarding survival outcomes.</p>
+              <p>The predictions are continuously updated as the user modifies the input parameters, providing real-time insights into survival likelihood.</p>
+              <div class="screenshot-container" style="text-align: center;">
+                  <!-- Actual screenshot of the survival calculator -->
+                  <h3>Survival Calculator Screenshot</h3>
+                  <img src="survival_calculator_screenshot.png" alt="Survival Calculator Screenshot" class="screenshot">
+              </div>              
+          </div>
+      </section>            
+      
+      
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Here are some images and illustrations depicting the tragedy of the incident and how the survivors escaped.</p>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Titanic_lifeboat.jpg/1200px-Titanic_lifeboat.jpg" alt="Titanic Lifeboat">
+                <p class="caption">Titanic Lifeboat</p>
+            </div>
+            <div class="image-item">
+                <img src="https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto%3Agood%2Cw_1200/MTkwNTgxMzYwMTQwNzU2ODYw/sinking-of-the-titanic-by-willy-stoewer.jpg" alt="Sinking of the Titanic">
+                <p class="caption">Sinking of the Titanic</p>
+            </div>
+            <div class="image-item">
+                <img src="https://i2-prod.mirror.co.uk/incoming/article30278243.ece/ALTERNATES/s1200b/0_Titanic-Tours.jpg" alt="Sunken and Rusted Titanic">
+                <p class="caption">Sunken and Rusted Titanic</p>
+            </div>
+            <div class="image-item below-three">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjLLpo8S0ZxPvrzpdISZqwlnkVg2KHaLsJfA&s" alt="Newspaper of the incident" class="first-image">
+              <p class="caption">Newspaper of the incident</p>
+            </div>
+            <div class="image-item below-three">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5g7rb0tpB6gDd1ILFRxBHN-hM3OR4cB78Ow&s" alt="Cool Picture" class="second-image">
+              <p class="caption">Cool Picture</p>
+            </div>
+            <div class="image-item below-three">
+              <img src="https://media.posterlounge.com/img/products/760000/750391/750391_poster.jpg" alt="Titanic Poster" class="third-image">
+              <p class="caption">Titanic Poster</p>
+            </div>
+          
+        </div>
+    </section>
+  
+    <footer id="contact">
+    <p>&copy; 2024 Titanic Survival Predictor. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

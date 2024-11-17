@@ -1,0 +1,253 @@
+body {
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #cdeeff;
+  color: #0f3057;
+}
+#landingPageLink {
+  color: yellow;
+  font-style: bold;
+  font-size: large;
+  font-weight: 1000;
+  padding: 10px 10px;
+  border: 2px solid yellow;
+  border-radius: 25px;
+  
+}
+.history-item{
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  background-color: #cdeeff6e;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+
+section:first-of-type {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-item {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+select, input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M18.293 4.293a1 1 0 0 0-1.414 0L10 10.586 2.707 3.293a1 1 0 1 0-1.414 1.414l8 8a1 1 0 0 0 1.414 0l8-8a1 1 0 0 0 0-1.414z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+---------------------
+/* Landing page*/
+
+
+    body {
+        font-family: 'Times New Roman', serif;
+        margin: 0;
+        padding: 0;
+        background-color: #cdeeff;
+        color: #0f3057;
+    }
+
+    header {
+        background-color: #0f3057;
+        color: #cdeeff;
+        padding: 20px;
+        text-align: center;
+    }
+/*styling the navigational menu*/
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: #cdeeff;
+        text-decoration: none;
+    }
+/* styling the secetions (white boxes)*/
+    section {
+        padding: 40px;
+        background-color: #fff;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+    }
+
+    footer {
+        background-color: #0f3057;
+        color: #cdeeff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+/* Ensure proper grid layout */
+/* Ensure proper grid layout */
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-item {
+  text-align: center;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.caption {
+  margin-top: 10px;
+}
+
+/* Remove the max-height restriction */
+.below-three img {
+  max-height: none;
+}
+
+/* Adjust the size of the first image */
+.first-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+/* Adjust the size of the second image */
+.second-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+/* Adjust the size of the third image */
+.third-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+
+
+/*creating a survival button that sends you to the survival page*/
+    .survival-button {
+        display: block;
+        margin: 40px auto;
+        padding: 10px 20px;
+        background-color: #0f3057;
+        color: #cdeeff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        width: fit-content;
+    }
+
+    .survival-button:hover {
+        background-color: #092037;
+    }
+    
+/*header allignment to the center*/        
+    h2 {
+        text-align: center; /* Center text within <h2> */
+    }
+    h1 {
+        text-align: center; /* Center text within <h2> */
+    }
+    h3 {
+        text-align: center; /* Center text within <h2> */
+    }
+
+    .calculator-link {
+      text-decoration: none; /* Remove underline */
+      color: inherit; /* Inherit text color from parent */
+  }
+  
+  .calculator-link:visited {
+      color: inherit; /* Inherit text color for visited link */
+  }
+  
+  .calculator-link.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 1.2em;
+    background-color: #0f3057;
+    color: #cdeeff; /* Bootstrap primary blue color */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-link.button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+  .calculator-link:focus,
+  .calculator-link:hover,
+  .calculator-link:active {
+      text-decoration: none; /* Remove underline on hover and focus */
+      color: inherit; /* Inherit text color for hover and focus */
+  }
+  
+  .screenshot-container {
+    text-align: center;
+}
+
+.screenshot {
+    max-width: 60%; /* Adjust the maximum width as needed */
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px; /* Add some top margin for spacing */
+}

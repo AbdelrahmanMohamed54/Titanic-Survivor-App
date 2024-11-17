@@ -1,0 +1,20 @@
+stages:
+  - build
+
+docker-build:
+
+  image: docker:latest
+
+  stage: build
+
+  services:
+    - docker:dind
+
+  variables:
+    IMAGE_NAME: "web_service_image:1.0"
+
+  script:
+    - docker build -t $CI_REGISTRY/ainb_24_icebreaker/titanic_web_service/$IMAGE_NAME .
+    - docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    - docker image push $CI_REGISTRY/ainb_24_icebreaker/titanic_web_service/$IMAGE_NAME
+

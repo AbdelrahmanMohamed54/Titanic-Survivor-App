@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survival Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h2>Survival Calculator</h2>
+            <nav>
+                <ul>
+                    <li><a id="landingPageLink" href="LandingPage.html">Landing Page</a></li>
+                    <li><a href="#information-input">Information Input</a></li>
+                    <li><a href="#model-selection">Model Selection</a></li>
+                    <li><a href="#prediction-results">Prediction Results</a></li>
+                    <li><a href="#reset">Reset</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="form-section" id="information-input">
+            <h3>Information Input</h3>
+            <form id="passenger-form">
+                <div class="form-item">
+                    <label for="title" title="select the passenger's title">Title:</label>
+                    <select id="title">
+                        <option value="Master">Master</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="pclass" title="select the passenger's class">PClass:</label>
+                    <select id="pclass">
+                        <option value="1">First</option>
+                        <option value="2">Second</option>
+                        <option value="3">Third</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="sex" title="select the passenger's sex">Sex:</label>
+                    <select id="sex">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="age" title="enter passenger's age in years">Age:</label>
+                    <input type="number" id="age" min="0" max="100"  /> 
+                </div>
+                <div class="form-item">
+                    <label for="fare" title="enter the passenger's fare in dollars">Fare:</label>
+                    <input type="number" id="fare" min="0" max="500" /> <!-- step="0.01" -->
+                </div>
+                <div class="form-item">
+                    <label for="alone" title="select wether the passenger traveled alone or not">Traveled Alone:</label>
+                    <select id="alone">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="embarked" title="select the port where the passenger boarded the Titanic">Embarked:</label>
+                    <select id="embarked">
+                        <option value="C">Cherbourg</option>
+                        <option value="Q">Queenstown</option>
+                        <option value="S">Southampton</option>
+                    </select>
+                </div>
+            </form>
+        </section>
+            <section class="form-section" id="reset">
+                <button class="survival-button" onclick="resetCalculator()">Reset</button>
+            </section>
+
+        <section class="form-section" id="model-selection">
+            <h3>Model Selection</h3>
+            <form id="model-form">
+                <label>
+                    <input type="checkbox" name="model" value="decisionTree" />
+                    Decision Tree
+                </label>
+                <label>
+                    <input type="checkbox" name="model" value="knn" />
+                    KNN
+                </label>
+                <label>
+                    <input type="checkbox" name="model" value="logisticRegression" />
+                    Logistic Regression
+                </label>
+                <label>
+                    <input type="checkbox" name="model" value="randomForest" />
+                    Random Forest
+                </label>
+                <label>
+                    <input type="checkbox" name="model" value="svm" />
+                    Support Vector Machines
+                </label>
+
+            </form>
+        </section>
+       
+
+        <section class="form-section" id="prediction-results">
+            <h3>Prediction Results</h3>
+            <div id="results"></div>
+        </section>
+        <section class="form-section" id="history">
+            <h3>History</h3>
+            <div id="history-results"></div>
+        </section>
+
+   
+
+        
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2024 Titanic Survival Predictor. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
