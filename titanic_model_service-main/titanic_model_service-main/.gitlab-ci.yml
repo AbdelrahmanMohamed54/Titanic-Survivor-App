@@ -1,0 +1,38 @@
+stages:
+  - build
+  - testing
+
+docker-build:
+
+  image: docker:latest
+
+  stage: build
+
+  services:
+    - docker:dind
+
+  variables:
+    IMAGE_NAME: "model_service_image:1.0"
+
+  script:
+    - docker build -t $CI_REGISTRY/ainb_24_icebreaker/titanic_model_service/$IMAGE_NAME .
+    - docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    - docker image push $CI_REGISTRY/ainb_24_icebreaker/titanic_model_service/$IMAGE_NAME
+
+# Test stage: Runs tests using pytest
+run-tests:
+  image: python:latest
+  stage: testing
+  before_script:
+    - pip install -r requirements.txt
+  script:
+    - pytest --cov=./ --cov-report=html
+    - mkdir -p htmlcov  # Ensure the directory exists
+
+  artifacts:
+    paths:
+      - htmlcov/
+  only:
+    - merge_requests
+    - branches
+

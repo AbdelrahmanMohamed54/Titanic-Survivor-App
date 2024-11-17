@@ -1,0 +1,43 @@
+stages:
+  - build
+  - test
+
+services:
+  - docker:19.03.12
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+before_script:
+  - docker info
+
+build_services:
+  stage: build
+  script:
+    - docker-compose build
+
+run_frontend_e2e_tests:
+  stage: test
+  script:
+    - docker-compose up -d
+    - npx wait-on http://localhost:8080
+    - npx cypress run --spec "cypress/e2e/frontend.cy.js"
+  artifacts:
+    paths:
+      - cypress/videos
+      - cypress/screenshots
+  after_script:
+    - docker-compose down
+
+run_backend_e2e_tests:
+  stage: test
+  script:
+    - docker-compose up -d
+    - npx wait-on http://localhost:5001/api
+    - npx cypress run --spec "cypress/e2e/prediction.cy.js"
+  artifacts:
+    paths:
+      - cypress/videos
+      - cypress/screenshots
+  after_script:
+    - docker-compose down
